@@ -1,0 +1,26 @@
+name: Demo Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "Hello GitHub Actions"
+
+      - name: Display Date
+        run: date
+
+      - name: List Files
+        run: ls -la
+
+      - name: Print Working Directory
+        run: pwd
